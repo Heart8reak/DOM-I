@@ -48,8 +48,6 @@ NavBar
 */
 
 const nav = document.querySelectorAll("nav a");
-console.log(nav);
-
 
 // Change the color of the navigation text to be green.
 nav.forEach(element => element.style.color = 'green');
@@ -78,6 +76,14 @@ nav[4].textContent = siteContent.nav["nav-item-5"];
 nav[5].textContent = siteContent.nav["nav-item-6"];
 
 
+// Button
+const myBtn = document.querySelector('.btn');
+console.log(myBtn)
+
+myBtn.addEventListener('click', (event) => {
+  console.log("We Pressed the Button!")
+});
+
 
 /*
 #################
@@ -86,7 +92,7 @@ CTA
 */
 
 let cta = document.querySelector('h1');
-cta.innerHTML = siteContent['cta']['h1'];
+cta.innerHTML = siteContent['cta']['h1'].replace(/\s/g, '</br>');
 
 let ctaButton = document.querySelector('button');
 ctaButton.innerText = siteContent['cta']['button'];

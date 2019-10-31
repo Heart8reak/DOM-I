@@ -131,6 +131,11 @@ header .logo {
     color: white;
 }
 
+.btn {
+    width: 150px;
+    margin: 0 auto;
+}
+
 /* Main Content Styles */
 
 .main-content {
