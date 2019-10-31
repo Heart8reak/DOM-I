@@ -47,8 +47,12 @@ NavBar
 #################
 */
 
-const nav = document.querySelectorAll("nav a");
+const nav = document.querySelectorAll("a");
 
+let itemIncrements = 1;
+const navList = nav.forEach(element => {
+  return (element.textContent = siteContent.nav[`nav-item-${itemIncrements++}`]);
+})
 // Change the color of the navigation text to be green.
 nav.forEach(element => element.style.color = 'green');
 
@@ -68,12 +72,13 @@ navBar.prepend(home);
 blog.style.color = 'green';
 home.style.color = 'green';
 
-nav[0].textContent = siteContent.nav["nav-item-1"];
-nav[1].textContent = siteContent.nav["nav-item-2"];
-nav[2].textContent = siteContent.nav["nav-item-3"];
-nav[3].textContent = siteContent.nav["nav-item-4"];
-nav[4].textContent = siteContent.nav["nav-item-5"];
-nav[5].textContent = siteContent.nav["nav-item-6"];
+
+// nav[0].textContent = siteContent.nav["nav-item-1"];
+// nav[1].textContent = siteContent.nav["nav-item-2"];
+// nav[2].textContent = siteContent.nav["nav-item-3"];
+// nav[3].textContent = siteContent.nav["nav-item-4"];
+// nav[4].textContent = siteContent.nav["nav-item-5"];
+// nav[5].textContent = siteContent.nav["nav-item-6"];
 
 
 // Button
@@ -136,9 +141,9 @@ let contactTitle = document.querySelector('.contact h4');
 contactTitle.innerHTML = siteContent['contact']['contact-h4'];
 
 let contactContent = document.querySelectorAll('.contact p');
-contactContent[0].innerHTML = siteContent.contact['address'];
-contactContent[1].innerHTML = siteContent.contact['phone'];
-contactContent[2].innerHTML = siteContent.contact['email'];
+contactContent[0].innerHTML = "123 Way Street </br> Somewhere, USA";
+contactContent[1].innerHTML = siteContent.contact.phone;
+contactContent[2].innerHTML = siteContent.contact.email;
 
 /*
 #################
